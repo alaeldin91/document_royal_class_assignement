@@ -1,0 +1,429 @@
+{
+	"info": {
+		"_postman_id": "db2d90fc-4070-45f2-8184-f3e9c717d93a",
+		"name": "document_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4958103"
+	},
+	"item": [
+		{
+			"name": "store_key_document",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "10|jolOqyP6LbmZvY7Om9oqy95ibAMqhWmPejMtijQ51220cd4a",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"module\": \"General\",\r\n    \"version\": 1,\r\n    \"metadata\": {\r\n        \"tags\": [\"tag1\", \"tag3\"]\r\n    },\r\n    \"header\": \"Document Headersss\",\r\n    \"body\": \"Document Body Content\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/store-key-document",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"store-key-document"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-document",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "10|jolOqyP6LbmZvY7Om9oqy95ibAMqhWmPejMtijQ51220cd4a",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":34,\r\n    \"module\": \"General\",\r\n    \"version\": 1,\r\n    \"metadata\": {\r\n        \"description\": \"Document metadata\",\r\n        \"tags\": [\"tag1\", \"tag2\"]\r\n    },\r\n\r\n    \"header\": \"This is the document header.\",\r\n    \"body\": \"This is the document body.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/store-key-document",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"store-key-document"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_name\":\"Alaeldin1\",\r\n    \"email\":\"alaeldinmusa97@gmail.com\",\r\n     \"role\":\"user\",\r\n      \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http:///127.0.0.1:8000/api/v1/user-register",
+					"protocol": "http",
+					"path": [
+						"127.0.0.1:8000",
+						"api",
+						"v1",
+						"user-register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"email\":\"alaeldinmusa92@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/user-login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"user-login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "9|MyUhhjJnIJrAYJOY8iGn0R3xPOtimoqCfOAVYBSjaba8e936",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/general/test",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"general",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-document-versions",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "10|jolOqyP6LbmZvY7Om9oqy95ibAMqhWmPejMtijQ51220cd4a",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/documents/versions/34",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"documents",
+						"versions",
+						"34"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_document",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "9|Uhhn5tZ7bsMatYZYbCSRNhIGdtlHKazbLp8BYRed65fb50de",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/documents/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"documents",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search_document_using_meta_data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "10|jolOqyP6LbmZvY7Om9oqy95ibAMqhWmPejMtijQ51220cd4a",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"module\": \"General\",\r\n  \"user_id\": 5,\r\n  \"tags\": \"tag1,tag3\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/documents/search",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"documents",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch_document",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "10|jolOqyP6LbmZvY7Om9oqy95ibAMqhWmPejMtijQ51220cd4a",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/documents/34",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"documents",
+						"34"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search_document_using_elstic_search",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "10|jolOqyP6LbmZvY7Om9oqy95ibAMqhWmPejMtijQ51220cd4a",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"search_term\": \"General\",\r\n    \"module\": \"General\",\r\n    \"created_at\": \"2024-01-01\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/search-documents",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"search-documents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "store-update-document",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "10|jolOqyP6LbmZvY7Om9oqy95ibAMqhWmPejMtijQ51220cd4a",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"module\": \"General\",\r\n    \"version\": 1,\r\n    \"metadata\": {\r\n        \"tags\": [\"tag1\", \"tag3\"]\r\n    },\r\n    \"header\": \"Document Headersss\",\r\n    \"body\": \"This is a large document body that needs to be encrypted and stored asynchronously.\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/store-update-document",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"store-update-document"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
